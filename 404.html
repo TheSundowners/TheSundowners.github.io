@@ -1,365 +1,210 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>幽灵404页面</title>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>页面没有找到 | crush</title><meta name="author" content="sundowners"><meta name="copyright" content="sundowners"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="热爱漫无边际，生活自有分寸。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="crush">
+<meta property="og:url" content="http://example.com/404.html">
+<meta property="og:site_name" content="crush">
+<meta property="og:description" content="热爱漫无边际，生活自有分寸。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/touxiang.jpg">
+<meta property="article:author" content="sundowners">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/touxiang.jpg"><link rel="shortcut icon" href="/./img/bg.jpg"><link rel="canonical" href="http://example.com/404"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: sundowners","link":"链接: ","source":"来源: crush","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '页面没有找到',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-02-10 11:57:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<script type="text/javascript" src="https://a-oss.zuanmang.net/2020/20200101-cc0f0c1509531.js"></script>
-![请在此添加图片描述](https://ask8088-private-1251520898.cos.ap-guangzhou.myqcloud.com/developer-images/article/2624059/j78luljcsk.png?q-sign-algorithm=sha1&q-ak=AKID2uZ1FGBdx1pNgjE3KK4YliPpzyjLZvug&q-sign-time=1684208598;1684215798&q-key-time=1684208598;1684215798&q-header-list=&q-url-param-list=&q-signature=6b20daab9bdfcbdd6e9b7f967664b9d5f7dc7ddd)
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<style>
-html, body {
-  background: #28254C;
-  font-family: 'Ubuntu';
-}
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-* {
-  box-sizing: border-box;
-}
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-.box {
-  width: 350px;
-  height: 100%;
-  max-height: 600px;
-  min-height: 450px;
-  background: #332F63;
-  border-radius: 20px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px 50px;
-}
-.box .box__ghost {
-  padding: 15px 25px 25px;
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -30%);
-}
-.box .box__ghost .symbol:nth-child(1) {
-  opacity: .2;
-  animation: shine 4s ease-in-out 3s infinite;
-}
-.box .box__ghost .symbol:nth-child(1):before, .box .box__ghost .symbol:nth-child(1):after {
-  content: '';
-  width: 12px;
-  height: 4px;
-  background: #fff;
-  position: absolute;
-  border-radius: 5px;
-  bottom: 65px;
-  left: 0;
-}
-.box .box__ghost .symbol:nth-child(1):before {
-  transform: rotate(45deg);
-}
-.box .box__ghost .symbol:nth-child(1):after {
-  transform: rotate(-45deg);
-}
-.box .box__ghost .symbol:nth-child(2) {
-  position: absolute;
-  left: -5px;
-  top: 30px;
-  height: 18px;
-  width: 18px;
-  border: 4px solid;
-  border-radius: 50%;
-  border-color: #fff;
-  opacity: .2;
-  animation: shine 4s ease-in-out 1.3s infinite;
-}
-.box .box__ghost .symbol:nth-child(3) {
-  opacity: .2;
-  animation: shine 3s ease-in-out .5s infinite;
-}
-.box .box__ghost .symbol:nth-child(3):before, .box .box__ghost .symbol:nth-child(3):after {
-  content: '';
-  width: 12px;
-  height: 4px;
-  background: #fff;
-  position: absolute;
-  border-radius: 5px;
-  top: 5px;
-  left: 40px;
-}
-.box .box__ghost .symbol:nth-child(3):before {
-  transform: rotate(90deg);
-}
-.box .box__ghost .symbol:nth-child(3):after {
-  transform: rotate(180deg);
-}
-.box .box__ghost .symbol:nth-child(4) {
-  opacity: .2;
-  animation: shine 6s ease-in-out 1.6s infinite;
-}
-.box .box__ghost .symbol:nth-child(4):before, .box .box__ghost .symbol:nth-child(4):after {
-  content: '';
-  width: 15px;
-  height: 4px;
-  background: #fff;
-  position: absolute;
-  border-radius: 5px;
-  top: 10px;
-  right: 30px;
-}
-.box .box__ghost .symbol:nth-child(4):before {
-  transform: rotate(45deg);
-}
-.box .box__ghost .symbol:nth-child(4):after {
-  transform: rotate(-45deg);
-}
-.box .box__ghost .symbol:nth-child(5) {
-  position: absolute;
-  right: 5px;
-  top: 40px;
-  height: 12px;
-  width: 12px;
-  border: 3px solid;
-  border-radius: 50%;
-  border-color: #fff;
-  opacity: .2;
-  animation: shine 1.7s ease-in-out 7s infinite;
-}
-.box .box__ghost .symbol:nth-child(6) {
-  opacity: .2;
-  animation: shine 2s ease-in-out 6s infinite;
-}
-.box .box__ghost .symbol:nth-child(6):before, .box .box__ghost .symbol:nth-child(6):after {
-  content: '';
-  width: 15px;
-  height: 4px;
-  background: #fff;
-  position: absolute;
-  border-radius: 5px;
-  bottom: 65px;
-  right: -5px;
-}
-.box .box__ghost .symbol:nth-child(6):before {
-  transform: rotate(90deg);
-}
-.box .box__ghost .symbol:nth-child(6):after {
-  transform: rotate(180deg);
-}
-.box .box__ghost .box__ghost-container {
-  background: #fff;
-  width: 100px;
-  height: 100px;
-  border-radius: 100px 100px 0 0;
-  position: relative;
-  margin: 0 auto;
-  animation: upndown 3s ease-in-out infinite;
-}
-.box .box__ghost .box__ghost-container .box__ghost-eyes {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  height: 12px;
-  width: 70px;
-}
-.box .box__ghost .box__ghost-container .box__ghost-eyes .box__eye-left {
-  width: 12px;
-  height: 12px;
-  background: #332F63;
-  border-radius: 50%;
-  margin: 0 10px;
-  position: absolute;
-  left: 0;
-}
-.box .box__ghost .box__ghost-container .box__ghost-eyes .box__eye-right {
-  width: 12px;
-  height: 12px;
-  background: #332F63;
-  border-radius: 50%;
-  margin: 0 10px;
-  position: absolute;
-  right: 0;
-}
-.box .box__ghost .box__ghost-container .box__ghost-bottom {
-  display: flex;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-.box .box__ghost .box__ghost-container .box__ghost-bottom div {
-  flex-grow: 1;
-  position: relative;
-  top: -10px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: #fff;
-}
-.box .box__ghost .box__ghost-container .box__ghost-bottom div:nth-child(2n) {
-  top: -12px;
-  margin: 0 -0px;
-  border-top: 15px solid #332F63;
-  background: transparent;
-}
-.box .box__ghost .box__ghost-shadow {
-  height: 20px;
-  box-shadow: 0 50px 15px 5px #3B3769;
-  border-radius: 50%;
-  margin: 0 auto;
-  animation: smallnbig 3s ease-in-out infinite;
-}
-.box .box__description {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.box .box__description .box__description-container {
-  color: #fff;
-  text-align: center;
-  width: 200px;
-  font-size: 16px;
-  margin: 0 auto;
-}
-.box .box__description .box__description-container .box__description-title {
-  font-size: 24px;
-  letter-spacing: .5px;
-}
-.box .box__description .box__description-container .box__description-text {
-  color: #8C8AA7;
-  line-height: 20px;
-  margin-top: 20px;
-}
-.box .box__description .box__button {
-  display: block;
-  position: relative;
-  background: #FF5E65;
-  border: 1px solid transparent;
-  border-radius: 50px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  line-height: 50px;
-  font-size: 18px;
-  padding: 0 70px;
-  white-space: nowrap;
-  margin-top: 25px;
-  transition: background .5s ease;
-  overflow: hidden;
-}
-.box .box__description .box__button:before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 100px;
-  background: #fff;
-  bottom: -25px;
-  left: 0;
-  border: 2px solid #fff;
-  transform: translateX(-50px) rotate(45deg);
-  transition: transform .5s ease;
-}
-.box .box__description .box__button:hover {
-  background: transparent;
-  border-color: #fff;
-}
-.box .box__description .box__button:hover:before {
-  transform: translateX(250px) rotate(45deg);
-}
-
-@keyframes upndown {
-  0% {
-    transform: translateY(5px);
-  }
-  50% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(5px);
-  }
-}
-@keyframes smallnbig {
-  0% {
-    width: 90px;
-  }
-  50% {
-    width: 100px;
-  }
-  100% {
-    width: 90px;
-  }
-}
-@keyframes shine {
-  0% {
-    opacity: .2;
-  }
-  25% {
-    opacity: .1;
-  }
-  50% {
-    opacity: .2;
-  }
-  100% {
-    opacity: .2;
-  }
-}
-</style>
-</head>
-<body>
-<div class="box">
-  <div class="box__ghost">
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    
-    <div class="box__ghost-container">
-      <div class="box__ghost-eyes">
-        <div class="box__eye-left"></div>
-        <div class="box__eye-right"></div>
-      </div>
-      <div class="box__ghost-bottom">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-    <div class="box__ghost-shadow"></div>
-  </div>
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-  <div class="box__description">
-    <div class="box__description-container">
-      <div class="box__description-title">404错误！</div>
-      <div class="box__description-text">看来我们找不到你要找的那一页</div>
-    </div>
-    
-    <a href="/index.php" class="box__button">返回</a>
-    
-  </div>
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-</div>
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script src="https://cyan-blog.oss-cn-shenzhen.aliyuncs.com/cdn/js/three.min.js"></script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="error404" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">crush</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><div id="error-wrap"><div class="error-content"><div class="error-img"><img src="/null" alt="Page not found"></div><div class="error-info"><h1 class="error_title">404</h1><div class="error_subtitle">Page Not Found</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="7788211809" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script async data-pjax src="/js/sky.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
-<script>
-//based on https://dribbble.com/shots/3913847-404-page
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
 
-var pageX = $(document).width();
-var pageY = $(document).height();
-var mouseY=0;
-var mouseX=0;
+document.addEventListener('pjax:send', function () {
 
-$(document).mousemove(function( event ) {
-  //verticalAxis
-  mouseY = event.pageY;
-  yAxis = (pageY/2-mouseY)/pageY*300; 
-  //horizontalAxis
-  mouseX = event.pageX / -pageX;
-  xAxis = -mouseX * 100 - 100;
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
 
-  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' }); 
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
 
-  //console.log('X: ' + xAxis);
+  typeof typed === 'object' && typed.destroy()
 
-});</script>
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
 
-</body>
-</html>
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
